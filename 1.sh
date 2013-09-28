@@ -1,0 +1,1 @@
+echo "import test"|python

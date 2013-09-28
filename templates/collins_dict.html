@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% for word in word_list %}
+    <a href="./{{word}}">{{ word }}</a> <a href="../paser_dict/{{word}}">parse</a> <br>
+  {% else %}
+    No word
+  {% endfor %}
+  </ul>
+{% endblock %}

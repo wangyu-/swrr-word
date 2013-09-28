@@ -1,0 +1,16 @@
+<!doctype html>
+<title>Flaskr</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Flaskr</h1>
+  <span class=metanav>
+  {% if not session.logged_in %}
+    <a href="{{ url_for('login') }}">log in</a>
+    <a href="{{ url_for('reg') }}">reg</a>
+  {% else %}
+    <a href="{{ url_for('logout') }}">log out</a>
+  {% endif %}
+  </span>
+  <a href="/collins_dict/">collins</a><br>
+  {% block body %}{% endblock %}
+</div>

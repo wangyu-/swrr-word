@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% for item in item_list %}
+    <li>{{item}}
+  {% else %}
+    No item
+  {% endfor %}
+  </ul>
+{% endblock %}
